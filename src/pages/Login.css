@@ -1,0 +1,92 @@
+.login-page {
+  min-height: calc(100vh - 150px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 440px;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.8), 0 0 40px var(--primary-light);
+}
+
+.login-header {
+  text-align: center;
+}
+
+.logo-icon-large {
+  width: 72px;
+  height: 72px;
+  background: rgba(14, 165, 233, 0.1);
+  border: 1px solid var(--primary-light);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  box-shadow: 0 0 30px var(--primary-light);
+}
+
+.login-header h2 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  color: var(--text-main);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 16px;
+  color: var(--text-dim);
+  transition: all 0.3s ease;
+}
+
+.glass-input.has-icon {
+  padding-left: 48px;
+  width: 100%;
+}
+
+.glass-input:focus + .input-icon {
+  color: var(--primary);
+}
+
+.login-btn {
+  padding: 16px !important;
+  font-size: 1.1rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 10px;
+}
+
+.login-footer {
+  text-align: center;
+}
+
+.text-sm {
+  font-size: 0.85rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.w-full {
+  width: 100%;
+}

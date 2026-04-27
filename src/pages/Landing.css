@@ -1,0 +1,209 @@
+.landing-page {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hero Section */
+.hero-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: calc(100vh - 120px);
+  align-items: center;
+  gap: 40px;
+  padding: 20px 0 60px;
+}
+
+@media (min-width: 1024px) {
+  .hero-section {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.badge-pill {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(14, 165, 233, 0.1);
+  border: 1px solid var(--primary-light);
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary-bright);
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--secondary);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--secondary-glow);
+  animation: pulse-soft 2s infinite ease-in-out;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 5vw, 3.8rem);
+  line-height: 1.1;
+  color: var(--text-main);
+  filter: drop-shadow(0 0 20px rgba(14, 165, 233, 0.1));
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  max-width: 580px;
+  line-height: 1.6;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+/* Hero Visual Deck */
+.hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.model-container {
+  width: 100%;
+  aspect-ratio: 0.9;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: radial-gradient(circle at center, var(--primary-light), transparent);
+}
+
+.scanning-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary), transparent);
+  box-shadow: 0 0 15px var(--primary);
+  animation: scan 4s infinite linear;
+  z-index: 2;
+}
+
+.floating-icon {
+  filter: drop-shadow(0 0 30px var(--primary-glow));
+  animation: float 6s infinite ease-in-out;
+}
+
+.stat-card {
+  position: absolute;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 3;
+  backdrop-filter: blur(20px);
+}
+
+.floating-card-1 {
+  top: 10%;
+  left: -5%;
+  animation: float 5s infinite ease-in-out 1s;
+}
+
+.floating-card-2 {
+  bottom: 15%;
+  right: -5%;
+  animation: float 7s infinite ease-in-out 0.5s;
+}
+
+.stat-value {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Features Section */
+.features-section {
+  padding: 80px 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+.section-header p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.feature-card {
+  padding: var(--card-padding);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.feature-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-blue { background: rgba(14, 165, 233, 0.1); border: 1px solid var(--primary-light); }
+.bg-purple { background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.2); }
+.bg-emerald { background: rgba(16, 185, 129, 0.1); border: 1px solid var(--secondary-glow); }
+
+.feature-card h3 {
+  font-size: 1.25rem;
+}
+
+.feature-card p {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+@keyframes scan {
+  0% { top: 0; }
+  100% { top: 100%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@media (max-width: 768px) {
+  .hero-section { text-align: center; }
+  .hero-subtitle { margin: 0 auto; }
+  .hero-actions { justify-content: center; }
+  .floating-card-1, .floating-card-2 { right: 0; left: 0; margin: 0 auto; width: fit-content; }
+}
