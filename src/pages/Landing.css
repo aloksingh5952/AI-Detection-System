@@ -202,8 +202,37 @@
 }
 
 @media (max-width: 768px) {
-  .hero-section { text-align: center; }
-  .hero-subtitle { margin: 0 auto; }
-  .hero-actions { justify-content: center; }
-  .floating-card-1, .floating-card-2 { right: 0; left: 0; margin: 0 auto; width: fit-content; }
+  .hero-section { 
+    text-align: center; 
+    padding: 20px 0 40px;
+    gap: 32px;
+  }
+  .badge-pill { margin: 0 auto; }
+  .hero-title { font-size: 2.2rem; }
+  .hero-subtitle { margin: 0 auto; font-size: 1.05rem; }
+  .hero-actions { 
+    justify-content: center; 
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto 0;
+  }
+  .hero-actions button, .hero-actions a {
+    width: 100%;
+  }
+  .model-container {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  .floating-card-1 { 
+    top: -10px; 
+    right: 0; left: 0; margin: 0 auto; width: fit-content; 
+  }
+  .floating-card-2 { 
+    bottom: -10px; 
+    right: 0; left: 0; margin: 0 auto; width: fit-content; 
+  }
+  
+  .section-header h2 { font-size: 2rem; }
 }

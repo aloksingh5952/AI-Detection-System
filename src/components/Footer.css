@@ -164,3 +164,8 @@
   font-weight: 700;
   border: 1px solid var(--primary-light);
 }
+
+@media (max-width: 768px) {
+  .app-footer { padding: 30px 16px; }
+  .footer-modal { padding: 32px 24px; }
+}

@@ -462,3 +462,13 @@
   color: white;
   box-shadow: 0 0 15px var(--primary-glow);
 }
+
+@media (max-width: 768px) {
+  .result-main-card, .data-card { padding: 24px; }
+  .data-grid { grid-template-columns: 1fr; }
+  .case-modal { padding: 24px; }
+  .case-overview-grid { grid-template-columns: 1fr; }
+  .analysis-page { gap: 32px; }
+  .matches-grid { grid-template-columns: 1fr; }
+  .analysis-header { flex-direction: column; gap: 16px; }
+}
